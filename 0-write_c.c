@@ -2,8 +2,9 @@
 
 /**
  * write_char - Writes a single character to stdout
- * @c: The character to be written
- * @count: Pointer to the count of characters written
+ * @val: va_list argument
+ *
+ * Return: Number of characters written
  */
 
 int write_char(va_list val)

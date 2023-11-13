@@ -2,14 +2,15 @@
 
 /**
  * write_str - Writes a string to stdout
- * @str: The string to be written
- * @count: Pointer to the count of characters written
+ * @val: va_list argument
+ *
+ * Return: Number of characters written
  */
 
 int write_str(va_list val)
 {
 	char *str;
-       	int i;
+	int i;
 	int length;
 
 	str = va_arg(val, char *);
