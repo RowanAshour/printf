@@ -5,7 +5,11 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+typedef struct format
+{
+	char *ph;
+	int (*function)();
+} convert;
 int write_char(va_list val);
 int write_str(va_list val);
 int _strlen(char *s);

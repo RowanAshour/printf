@@ -9,7 +9,7 @@
 int write_str(va_list val)
 {
 	char *str;
-	int i;
+       	int i;
 	int length;
 
 	str = va_arg(val, char *);
