@@ -1,6 +1,4 @@
-#include <stdarg.h>
-#include <unistd.h>
-#include "main.h"	/* Make sure to include your header file */
+#include "main.h"
 
 /**
  * write_char - Writes a single character to stdout
@@ -9,7 +7,7 @@
  */
 static void write_char(char c, int *count)
 {
-	write(1, &c, 1);
+	_putchar(c);
 	(*count)++;
 }
 
@@ -22,7 +20,7 @@ static void write_str(const char *str, int *count)
 {
 	while (*str)
 	{
-		write(1, str, 1);
+		_putchar(*str);
 		str++;
 		(*count)++;
 	}
@@ -92,5 +90,16 @@ int _printf(const char *format, ...)
 	va_end(args);
 
 	return (count);
+}
+
+/**
+ * _putchar - Writes a character to stdout
+ * @c: The character to be written
+ *
+ * Return: On success, 1. On error, -1 is returned.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
 
