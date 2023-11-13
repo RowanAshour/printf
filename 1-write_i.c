@@ -17,7 +17,7 @@ int write_int(va_list args)
 	i = i / 10;
 	num = i;
 
-	if (num < 0)
+	if (last < 0)
 	{
 		_putchar('-');
 		num = -num;
