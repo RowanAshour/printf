@@ -25,7 +25,6 @@ int write_int(va_list args)
 		last = -last;
 		j++;
 	}
-	
 	if (num > 0)
 	{
 		while (num / 10 != 0)
