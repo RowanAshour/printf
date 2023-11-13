@@ -17,5 +17,7 @@ int _strlenc(const char *s);
 int write_percent(void);
 int _printf(const char *format, ...);
 int _putchar(char c);
+int write_int(va_list args);
+int write_dec(va_list args);
 
 #endif /* MAIN_H */
