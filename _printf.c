@@ -9,7 +9,7 @@ int _printf(const char * const format, ...)
 	convert p[] = {
 		{"%s", write_str}, {"%c", write_char},
 		{"%%", write_percent}
-	};
+			};
 
 	va_list args;
 	int i = 0, j, length = 0;
@@ -21,7 +21,7 @@ int _printf(const char * const format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 13;
+		j = 2;
 		while (j >= 0)
 		{
 			if (p[j].ph[0] == format[i] && p[j].ph[1] == format[i + 1])
