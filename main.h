@@ -23,6 +23,6 @@ int write_b(va_list val);
 int write_uns(va_list args);
 int write_oct(va_list val);
 int write_x(va_list val);
-int write_hex(unsigned int num);
+int write_hex(va_list val);
 
 #endif /* MAIN_H */

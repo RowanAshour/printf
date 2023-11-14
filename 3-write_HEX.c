@@ -5,7 +5,7 @@
  * @num: number to print.
  * Return: counter.
  */
-int write_hex(unsigned int num)
+int write_hex(va_list val)
 {
 	int i;
 	int *array;
@@ -35,4 +35,3 @@ int write_hex(unsigned int num)
 	free(array);
 	return (counter);
 }
-
