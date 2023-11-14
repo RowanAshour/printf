@@ -2,35 +2,44 @@
 
 /**
  * write_oct - prints an octal number.
- * @val: arguments.
+ * @args: arguments.
  * Return: counter.
  */
-
-int write_oct(va_list val)
+int write_oct(va_list args)
 {
 	int i;
-	int *array;
-	int counter = 0;
-	unsigned int num = va_arg(val, unsigned int);
-	unsigned int tem = num;
+	int *digits_array;
+	int count = 0;
+	unsigned int number = va_arg(args, unsigned int);
+	unsigned int temp = number;
 
-	while (num / 8 != 0)
+	/* Count the number of digits in the octal representation */
+	while (number / 8 != 0)
 	{
-		num /= 8;
-		counter++;
+		number /= 8;
+		count++;
 	}
-	counter++;
-	array = malloc(counter * sizeof(int));
+	count++;
 
-	for (i = 0; i < counter; i++)
+	/* Allocate memory for an array to store the digits */
+	digits_array = malloc(count * sizeof(int));
+
+	/* Store the digits in the array */
+	for (i = 0; i < count; i++)
 	{
-		array[i] = tem % 8;
-		tem /= 8;
+		digits_array[i] = temp % 8;
+		temp /= 8;
 	}
-	for (i = counter - 1; i >= 0; i--)
+
+	/* Print the octal number */
+	for (i = count - 1; i >= 0; i--)
 	{
-		_putchar(array[i] + '0');
+		_putchar(digits_array[i] + '0');
 	}
-	free(array);
-	return (counter);
+
+	/* Free the allocated memory */
+	free(digits_array);
+
+	return (count);
 }
+

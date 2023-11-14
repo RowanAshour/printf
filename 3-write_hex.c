@@ -1,37 +1,47 @@
 #include "main.h"
 
 /**
- * write_hex - prints an hexdecimal number.
- * @val: number to print.
- * Return: counter.
+ * write_hex - prints a hexadecimal number.
+ * @args: argument to print.
+ * Return: number of characters printed.
  */
-int write_hex(va_list val)
+int write_hex(va_list args)
 {
 	int i;
-	int *array;
-	int counter = 0;
-	unsigned int num = va_arg(val, unsigned int);
-	unsigned int tem = num;
+	int *digits_array;
+	int count = 0;
+	unsigned int number = va_arg(args, unsigned int);
+	unsigned int temp = number;
 
-	while (num / 16 != 0)
+	/* Count the number of digits in the hexadecimal representation */
+	while (number / 16 != 0)
 	{
-		num /= 16;
-		counter++;
+		number /= 16;
+		count++;
 	}
-	counter++;
-	array = malloc(counter * sizeof(int));
+	count++;
 
-	for (i = 0; i < counter; i++)
+	/* Allocate memory for an array to store the digits */
+	digits_array = malloc(count * sizeof(int));
+
+	/* Store the digits in the array */
+	for (i = 0; i < count; i++)
 	{
-		array[i] = tem % 16;
-		tem /= 16;
+		digits_array[i] = temp % 16;
+		temp /= 16;
 	}
-	for (i = counter - 1; i >= 0; i--)
+
+	/* Print the hexadecimal number */
+	for (i = count - 1; i >= 0; i--)
 	{
-		if (array[i] > 9)
-			array[i] = array[i] + 7;
-		_putchar(array[i] + '0');
+		if (digits_array[i] > 9)
+			digits_array[i] += 39;
+		_putchar(digits_array[i] + '0');
 	}
-	free(array);
-	return (counter);
+
+	/* Free the allocated memory */
+	free(digits_array);
+
+	return (count);
 }
+

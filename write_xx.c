@@ -1,17 +1,16 @@
 #include "main.h"
 
 /**
- * write_hex_extra - prints an hexgecimal number.
- *
- * @num: arguments.
+ * write_hex_extra - prints a hexadecimal number.
+ * @num: number to print.
  * Return: counter.
  */
-int write_hex_extra(unsigned long int num)
+int write_hex_extra(unsigned int num)
 {
-	long int i;
-	long int *array;
-	long int counter = 0;
-	unsigned long int temp = num;
+	int i;
+	int *array;
+	int counter = 0;
+	unsigned int temp = num;
 
 	while (num / 16 != 0)
 	{
@@ -19,17 +18,17 @@ int write_hex_extra(unsigned long int num)
 		counter++;
 	}
 	counter++;
-	array = malloc(counter * sizeof(long int));
+	array = malloc(counter * sizeof(int));
 
 	for (i = 0; i < counter; i++)
 	{
 		array[i] = temp % 16;
-		temp = temp / 16;
+		temp /= 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{
 		if (array[i] > 9)
-			array[i] = array[i] + 39;
+			array[i] = array[i] + 7;
 		_putchar(array[i] + '0');
 	}
 	free(array);
