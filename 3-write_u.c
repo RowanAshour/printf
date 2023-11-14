@@ -10,20 +10,20 @@
 
 int write_uns(va_list args)
 {
-	unsigned int i = va_arg(args, unsigned int);
-	int num, last = i % 10, digit, exp = 1;
-	int j = 1;
+	unsigned int n = va_arg(args, unsigned int);
+	int num, last = n % 10, digit, exp = 1;
+	int  i = 1;
 
-	i = i / 10;
-	num = i;
+	n = n / 10;
+	num = n;
 
 	if (last < 0)
 	{
 		_putchar('-');
 		num = -num;
-		i = -i;
+		n = -n;
 		last = -last;
-		j++;
+		i++;
 	}
 	if (num > 0)
 	{
@@ -32,17 +32,18 @@ int write_uns(va_list args)
 			exp = exp * 10;
 			num = num / 10;
 		}
-		num = i;
+		num = n;
 		while (exp > 0)
 		{
 			digit = num / exp;
 			_putchar(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
-			j++;
+			i++;
 		}
 	}
 	_putchar(last + '0');
 
-	return (j);
+	return (i);
 }
+
