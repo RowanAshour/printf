@@ -6,47 +6,43 @@
  * @args: argument that prints
  *
  * Return: number of char
- */
+*/
+
 int write_uns(va_list args)
 {
-	unsigned int number = va_arg(args, unsigned int);
-	int current_digit, last_digit = number % 10, digit, exp = 1;
-	int count = 1;
+	unsigned int n = va_arg(args, unsigned int);
+	int num, last = n % 10, digit, exp = 1;
+	int  i = 1;
 
-	number = number / 10;
-	current_digit = number;
+	n = n / 10;
+	num = n;
 
-	if (last_digit < 0)
+	if (last < 0)
 	{
 		_putchar('-');
-		current_digit = -current_digit;
-		number = -number;
-		last_digit = -last_digit;
-		count++;
+		num = -num;
+		n = -n;
+		last = -last;
+		i++;
 	}
-
-	if (current_digit > 0)
+	if (num > 0)
 	{
-		while (current_digit / 10 != 0)
+		while (num / 10 != 0)
 		{
 			exp = exp * 10;
-			current_digit = current_digit / 10;
+			num = num / 10;
 		}
-
-		current_digit = number;
-
+		num = n;
 		while (exp > 0)
 		{
-			digit = current_digit / exp;
+			digit = num / exp;
 			_putchar(digit + '0');
-			current_digit = current_digit - (digit * exp);
+			num = num - (digit * exp);
 			exp = exp / 10;
-			count++;
+			i++;
 		}
 	}
+	_putchar(last + '0');
 
-	_putchar(last_digit + '0');
-
-	return (count);
+	return (i);
 }
-

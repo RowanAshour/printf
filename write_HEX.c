@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * write_hex_extra - prints a hexadecimal number.
+ * write_HEX_extra - prints an hexdecimal number.
  * @num: number to print.
  * Return: counter.
  */
-int write_hex_extra(unsigned int num)
+int write_HEX_extra(unsigned int num)
 {
 	int i;
 	int *array;
 	int counter = 0;
-	unsigned int temp = num;
+	unsigned int tem = num;
 
 	while (num / 16 != 0)
 	{
@@ -22,8 +22,8 @@ int write_hex_extra(unsigned int num)
 
 	for (i = 0; i < counter; i++)
 	{
-		array[i] = temp % 16;
-		temp /= 16;
+		array[i] = tem % 16;
+		tem /= 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{
@@ -34,4 +34,3 @@ int write_hex_extra(unsigned int num)
 	free(array);
 	return (counter);
 }
-
