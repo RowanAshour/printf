@@ -2,7 +2,7 @@
 
 /**
  * write_hex - prints an hexdecimal number.
- * @num: number to print.
+ * @val: number to print.
  * Return: counter.
  */
 int write_hex(va_list val)
