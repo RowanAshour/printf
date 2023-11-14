@@ -25,7 +25,7 @@ int write_oct(va_list val);
 int write_x(va_list val);
 int write_hex(va_list val);
 int write_s(va_list val);
-int print_hex_extra(unsigned long int num);
-int print_HEX_extra(unsigned int num);
+int write_hex_extra(unsigned long int num);
+int write_HEX_extra(unsigned int num);
 
 #endif /* MAIN_H */

@@ -27,7 +27,7 @@ int write_s(va_list val)
 				_putchar('0');
 				length++;
 			}
-			length = length + print_HEX_extra(value);
+			length = length + write_HEX_extra(value);
 		}
 		else
 		{
