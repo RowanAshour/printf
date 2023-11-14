@@ -19,5 +19,6 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int write_int(va_list args);
 int write_dec(va_list args);
+int write_b(va_list val);
 
 #endif /* MAIN_H */
