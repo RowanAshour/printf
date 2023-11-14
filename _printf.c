@@ -8,9 +8,8 @@ int _printf(const char * const format, ...)
 {
 	convert p[] = {
 		{"%s", write_str}, {"%c", write_char},
-		{"%%", write_percent}, {"%i", write_int}, {"%d", write_dec}, {"%b", write_b},
-		{"%u", write_uns},
-		{"%o", write_oct}, {"%x", write_x}, {"%X", write_HEX},
+		{"%%", write_percent}, {"%i", write_int}, {"%d", write_dec}, {"%b", write_b}, {"%u", write_uns},
+		{"%o", write_oct}, {"%x", write_x}, {"%X", write_hex},
 			};
 
 	va_list args;
