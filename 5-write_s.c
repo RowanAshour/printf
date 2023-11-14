@@ -1,37 +1,40 @@
 #include "main.h"
+
 /**
- * write_s - print exclusuives string.
+ * write_string - print exclusive string.
  * @val: parameter.
  * Return: integer.
  */
-
-int write_s(va_list val)
+int write_string(va_list val)
 {
-	char *s;
+	char *input_string;
 	int i, length = 0;
-	int value;
+	int char_value;
 
-	s = va_arg(val, char *);
-	if (s == NULL)
-		s = "(null)";
-	for (i = 0; s[i] != '\0'; i++)
+	input_string = va_arg(val, char *);
+	if (input_string == NULL)
+		input_string = "(null)";
+
+	for (i = 0; input_string[i] != '\0'; i++)
 	{
-		if (s[i] < 32 || s[i] >= 127)
+		if (input_string[i] < 32 || input_string[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
 			length = length + 2;
-			value = s[i];
-			if (value < 16)
+			char_value = input_string[i];
+
+			if (char_value < 16)
 			{
 				_putchar('0');
 				length++;
 			}
-			length = length + write_HEX_extra(value);
+
+			length = length + write_HEX_extra(char_value);
 		}
 		else
 		{
-			_putchar(s[i]);
+			_putchar(input_string[i]);
 			length++;
 		}
 	}
