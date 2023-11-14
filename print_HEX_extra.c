@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
- * write_hex - prints an hexdecimal number.
- * @val: number to print.
+ * print_HEX_extra - prints an hexgecimal number.
+ * @num: number to print.
  * Return: counter.
  */
-int write_hex(va_list val)
+int print_HEX_extra(unsigned int num)
 {
 	int i;
 	int *array;
 	int counter = 0;
-	unsigned int num = va_arg(val, unsigned int);
 	unsigned int tem = num;
 
 	while (num / 16 != 0)
@@ -35,3 +34,4 @@ int write_hex(va_list val)
 	free(array);
 	return (counter);
 }
+

@@ -24,5 +24,6 @@ int write_uns(va_list args);
 int write_oct(va_list val);
 int write_x(va_list val);
 int write_hex(va_list val);
+int print_HEX_extra(unsigned int num);
 
 #endif /* MAIN_H */
