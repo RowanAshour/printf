@@ -14,7 +14,7 @@ int _printf(const char * const format, ...)
 		{"%%", write_percent}, {"%i", write_int}, {"%d", write_dec},
 		{"%b", write_b}, {"%u", write_uns},
 		{"%o", write_oct}, {"%x", write_x}, {"%X", write_hex},
-		{"%S", write_s}, {"%x", write_hex_extra}
+		{"%S", write_s}
 >>>>>>> 75618212c16ecf1c0f6e8584fe8f94e7aacf0b35
 			};
 
@@ -29,9 +29,9 @@ Here:
 	while (format[i] != '\0')
 	{
 <<<<<<< HEAD
-		j = 12;
+		j = 11;
 =======
-		j = 12;
+		j = 11;
 >>>>>>> 75618212c16ecf1c0f6e8584fe8f94e7aacf0b35
 		while (j >= 0)
 		{

@@ -9,23 +9,23 @@ int write_p(va_list val)
 {
 	void *p;
 	char *s = "(nil)";
-	long int n;
+	long int x;
+	int y;
 	int i;
-	int j;
 
 	p = va_arg(val, void*);
 	if (p == NULL)
 	{
-		for (j = 0; s[j] != '\0'; j++)
+		for (i = 0; s[i] != '\0'; i++)
 		{
-			_putchar(s[j]);
+			_putchar(s[i]);
 		}
-		return (j);
+		return (i);
 	}
 
 	x = (unsigned long int)p;
 	_putchar('0');
-	_putchar('n');
-	y = write_hex_extra(n);
-	return (i + 2);
+	_putchar('x');
+	y = write_hex_extra(x);
+	return (y + 2);
 }
