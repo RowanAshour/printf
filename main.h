@@ -20,5 +20,7 @@ int _putchar(char c);
 int write_int(va_list args);
 int write_dec(va_list args);
 int write_b(va_list val);
+int write_p(va_list val);
+int write_hex_extra(unsigned long int num);
 
 #endif /* MAIN_H */
