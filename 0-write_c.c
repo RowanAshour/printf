@@ -3,7 +3,7 @@
 /**
  * write_char - prints a character.
  * @val: arguments.
- * Return: integer.
+ * Return: 1.
  */
 int write_char(va_list val)
 {
