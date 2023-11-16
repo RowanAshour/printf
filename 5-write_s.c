@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * write_str - print exclusuives string.
+ * write_s - print exclusuives string.
  * @val: parameter.
  * Return: integer.
  */
 
-int write_str(va_list val)
+int write_s(va_list val)
 {
 	char *s;
 	int i, length = 0;
