@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * write_hex - prints an hexdecimal number.
- * @val: number to print.
+ * write_ hex - prints an hexdecimal number.
+ * @val: arguments.
  * Return: counter.
  */
-int write_hex(va_list val)
+int write_hex (va_list val)
 {
 	int i;
 	int *array;
@@ -30,7 +30,7 @@ int write_hex(va_list val)
 	{
 		if (array[i] > 9)
 			array[i] = array[i] + 7;
-			_putchar(array[i] + '0');
+		_putchar(array[i] + '0');
 	}
 	free(array);
 	return (counter);

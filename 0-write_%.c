@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * write_% - prints the char %.
+ * write_percent - prints the char %.
  * Return: 1.
  */
-int write_%(void)
+int write_percent(void)
 {
 	_putchar(37);
 	return (1);

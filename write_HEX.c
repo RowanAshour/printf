@@ -4,10 +4,9 @@
  * write_HEX_extra - prints an hexdecimal number.
  * @num: number to print.
  * Return: counter.
- *
  */
+int write_HEX_extra(unsigned long int num)
 
-int write_HEX_extra(unsigned int num)
 {
 	int i;
 	int *array;
@@ -15,7 +14,7 @@ int write_HEX_extra(unsigned int num)
 	unsigned int tem = num;
 
 	while (num / 16 != 0)
-	}
+	{
 		num /= 16;
 		counter++;
 	}
@@ -36,3 +35,4 @@ int write_HEX_extra(unsigned int num)
 	free(array);
 	return (counter);
 }
+

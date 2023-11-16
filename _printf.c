@@ -10,7 +10,7 @@ int _printf(const char * const format, ...)
 		{"%s", write_str}, {"%c", write_char}, {"%%", write_percent},
 		{"%i", write_int}, {"%d", write_dec}, {"%b", write_b},
 		{"%u", write_uns}, {"%o", write_oct}, {"%x", write_x},
-		{"%X", write_HEX}, {"%S", write_s}
+		{"%X", write_hex}, {"%S", write_s}
 			};
 	va_list args;
 	int i = 0, j, length = 0;
