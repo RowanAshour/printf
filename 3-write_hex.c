@@ -5,7 +5,7 @@
  * @val: arguments.
  * Return: counter.
  */
-int write_hex (va_list val)
+int write_hex(va_list val)
 {
 	int i;
 	int *array;
