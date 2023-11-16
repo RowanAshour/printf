@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * write_ hex - prints an hexdecimal number.
+ * write_hex - prints an hexdecimal number.
  * @val: arguments.
  * Return: counter.
  */

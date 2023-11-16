@@ -3,7 +3,7 @@
 /**
  * write_percent - prints the char %.
  *
- * Return: 1.
+ * Return: 1 (fail)
 */
 
 int write_percent(void)
