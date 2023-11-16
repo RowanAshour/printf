@@ -2,7 +2,9 @@
 
 /**
  * write_char - prints a character.
+ *
  * @val: arguments.
+ *
  * Return: int.
 */
 

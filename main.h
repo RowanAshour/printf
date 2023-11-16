@@ -28,4 +28,4 @@ int write_s(va_list val);
 int write_hex_extra(unsigned long int num);
 int write_HEX_extra(unsigned long int num);
 
-#endif /* MAIN_H */
+#endif

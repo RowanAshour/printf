@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * _printf - is a function that selects the correct function to print.
+ * _printf - function that selects the correct function to print.
+ *
  * @format: identifier to look for.
- * Return: the length of the string.
+ *
+ * Return: length of string.
 */
 
 int _printf(const char * const format, ...)

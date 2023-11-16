@@ -2,9 +2,11 @@
 
 /**
  * write_str - print a string.
+ *
  * @val: argument.
+ *
  * Return: the length of the string.
- */
+*/
 
 int write_str(va_list val)
 {
