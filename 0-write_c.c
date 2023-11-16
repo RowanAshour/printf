@@ -3,8 +3,9 @@
 /**
  * write_char - prints a character.
  * @val: arguments.
- * Return: 1.
- */
+ * Return: int.
+*/
+
 int write_char(va_list val)
 {
 	char s;

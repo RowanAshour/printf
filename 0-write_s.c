@@ -1,7 +1,8 @@
 #include "main.h"
+
 /**
  * write_str - print a string.
- * @val: argumen t.
+ * @val: argument.
  * Return: the length of the string.
  */
 
