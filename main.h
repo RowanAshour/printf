@@ -7,10 +7,11 @@
 #include <unistd.h>
 
 /**
- * struct format - converter for printf 
+ * struct format - converter for printf
  * @ph: type char pointer of the specifier
  * @function: function for the conversion specifier
-*/
+ *
+ */
 
 typedef struct format
 {
