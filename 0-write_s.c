@@ -7,7 +7,7 @@
 
 int write_str(va_list val)
 {
-	char *s;
+	char *str;
 	int i;
        int length;
 
