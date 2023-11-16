@@ -1,29 +1,31 @@
 #include "main.h"
 /**
- * write_s - print a string.
+ * write_str - print a string.
  * @val: argumen t.
  * Return: the length of the string.
  */
 
-int write_s(va_list val)
+int write_str(va_list val)
 {
 	char *s;
-	int i, len;
+	int i;
+       int length;
 
-	s = va_arg(val, char *);
-	if (s == NULL)
+	str = va_arg(val, char *);
+	if (str == NULL)
 	{
-		s = "(null)";
-		len = _strlen(s);
-		for (i = 0; i < len; i++)
-			_putchar(s[i]);
-		return (len);
+		str = "(null)";
+		length = _strlen(str);
+		for (i = 0; i < length; i++)
+			_putchar(str[i]);
+		return (length);
 	}
 	else
 	{
-		len = _strlen(s);
-		for (i = 0; i < len; i++)
-			_putchar(s[i]);
-		return (len);
+		length = _strlen(str);
+		for (i = 0; i < length; i++)
+			_putchar(str[i]);
+		return (length);
 	}
 }
+
